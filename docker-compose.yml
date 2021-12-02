@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+    python-part:
+        build: .
+        ports:
+          - 5000:5000
+    mariadb-part:
+        image: "mariadb:latest"
+        environment:
+            MARIADB_ROOT_PASSWORD: asROOTdb
+            MARIADB_USER: usuarioAS
+            MARIADB_PASSWORD: asUSERdb
+            MYSQL_DATABASE: MariaDBAS
+        ports:
+          - "3306:3306"
+        expose:
+          - "3306"
