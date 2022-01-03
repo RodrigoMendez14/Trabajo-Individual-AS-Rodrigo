@@ -1,6 +1,6 @@
 FROM ubuntu
 
-RUN apt -qq update && apt -qq -y install python3 && apt -qq -y install python3-pip && pip install mysql-connector && mkdir /appAS && apt -qq upgrade 
+RUN apt -qq update && apt -qq -y install python3 && apt -qq -y install python3-pip && pip install mysql-connector && mkdir /appAS && apt -qq -y upgrade 
 
 COPY ./main_Rodrigo_AS.py /appAS 
 
